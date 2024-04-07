@@ -6,8 +6,8 @@ app = Celery("tasks", backend="rpc://", broker="pyamqp://")
 
 
 @app.task
-async def fetch_cat_fact():
-    response = await requests.get("https://cat-fact.herokuapp.com/facts")
+def fetch_cat_fact():
+    response = requests.get("https://cat-fact.herokuapp.com/facts")
     if response.status_code == 200:
         data = response.json()
         if data:  # check if data is not empty
