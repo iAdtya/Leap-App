@@ -2,6 +2,8 @@
 
 ![Screenshot of my app](Screenshot%202024-04-08%20041717.png)
 
+## Output processed by the celery worker picked from rabbitmq which is message queue
+
 ## start the workers
 
 ```
